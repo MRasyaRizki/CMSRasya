@@ -18,7 +18,8 @@ Route::get('/register', function () {
 Route::get('/home', [homeController::class, 'index'])->name('home');
 Route::post('/signin', [authController::class, 'login'])->name('signin');
 Route::post('/signup', [authController::class, 'register'])->name('signup');
-Route::get('manageusers', [UserController::class, 'index'])->name('manageuser')->middleware('checkadmin');
+Route::get('logout', [authController::class, 'logout'])->name('logout');
+Route::get('manageusers', [UserController::class, 'index'])->name('manageuser');
 
 // ARTICLE
 Route::group(['prefix' => 'article', 'as' => 'article.'], function () {
