@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class authController extends Controller
 {
@@ -18,7 +21,7 @@ class authController extends Controller
         $regist->email = $request->input('email');
         $regist->password = Hash::make($request->input('password'));
         $regist->save(); 
-        return back();
+        return redirect()->route('login');
     }
 
     public function login(Request $request){
@@ -29,7 +32,6 @@ class authController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
             return redirect()->intended('/home');
         }
 

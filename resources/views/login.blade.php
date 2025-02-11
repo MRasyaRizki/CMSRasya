@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="d-flex justify-content-center align-items-center vh-100">
-        <form action="" method="POST" class="w-50">
+        <form action="{{route('signin')}}" method="POST" class="w-50">
             <h1 class="text-center my-2">Login</h1>
             @csrf
             <div class="mb-3">
