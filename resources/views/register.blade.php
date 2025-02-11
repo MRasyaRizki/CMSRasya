@@ -24,7 +24,7 @@
             </div>
             <div class="mb-3">
                 <p class="form-text">
-                    <a href="{{ route('auth.signin') }}">Already have an account?</a>
+                    <a href="/">Already have an account?</a>
                 </p>
             </div>
 

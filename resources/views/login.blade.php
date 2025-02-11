@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <p class="form-text">
-                    <a href="">Doesn't have an account?</a>
+                    <a href="/register">Doesn't have an account?</a>
                 </p>
             </div>
 
